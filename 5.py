@@ -9,17 +9,21 @@ class RoomObject:
     def __repr__(self):
         return f"{self.name}(координати={self.coordinates})"
 
+
 class Bed(RoomObject):
     def __init__(self, coordinates: list[float]):
         super().__init__("Bed", coordinates)
+
 
 class Table(RoomObject):
     def __init__(self, coordinates: list[float]):
         super().__init__("Table", coordinates)
 
+
 class Carpet(RoomObject):
     def __init__(self, coordinates: list[float]):
         super().__init__("Carpet", coordinates)
+
 
 class TV(RoomObject):
     def __init__(self, coordinates: list[float]):
@@ -62,8 +66,6 @@ class Room:
             for obj in self.objects:
                 print(f"  • {obj}")
         print("-" * 35 + "\n")
-
-
 
 
 if __name__ == "__main__":
